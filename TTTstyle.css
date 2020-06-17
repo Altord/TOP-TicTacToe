@@ -1,0 +1,26 @@
+:root{
+    --bg: rgb(32, 32, 32);
+    --users: rgb(233, 38, 142);
+    --light-grey: #e4e4e4;
+    --grey: #5e5e5e;
+    --dark-grey: #252422;
+}
+body{
+    margin: 0;
+    height: auto;
+    background-color: var(--bg);
+}
+h1{
+    text-align: center;
+    color: #b252a1;
+    font-size: 4rem;
+}
+
+.score-cont{
+    display: inline-flex;
+    flex-direction: column;
+
+}
+#p1, #p2{
+color: rgb(233, 38, 142)
+}
