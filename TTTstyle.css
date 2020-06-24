@@ -1,26 +1,149 @@
+@font-face {
+    font-family: karm;
+    src: url("extras/ka1.ttf")
+}
+@font-face {
+    font-family: disco-duck;
+    src: url("extras/DiscoDuckCondensedItalic-3D23.otf")
+}
+@font-face{
+    font-family: arcade-classic;
+    src: url("extras/ArcadeClassic-ov2x.ttf")
+}
+@font-face{
+    font-family: atari;
+    src: url("extras/AtariFontFullVersion-ZJ23.ttf")
+}
 :root{
+    font-family: arcade-classic;
     --bg: rgb(32, 32, 32);
     --users: rgb(233, 38, 142);
-    --light-grey: #e4e4e4;
-    --grey: #5e5e5e;
-    --dark-grey: #252422;
+    --pinkR: rgb(233, 38, 142);
 }
+
 body{
     margin: 0;
     height: auto;
     background-color: var(--bg);
 }
 h1{
+    margin-top: 0;
+    font-family: disco-duck;
     text-align: center;
-    color: #b252a1;
-    font-size: 4rem;
+    color: rgb(233, 38, 142);
+    font-size: 6rem;
+    -webkit-text-stroke: 3px purple;
+    text-shadow: 2px 2px 1px rgb(255,255,255), 4px 4px 1px rgb(49,241,255);
+
+}
+h2 {
+    top: -100px;
+    border: 3px rgb(49, 241, 255) solid;
+    padding: 0px 5px 0px;
+    border-radius: 5px;
+    color: rgb(233, 38, 142);
+}
+p{
+    font-family: karm;
+
 }
 
-.score-cont{
+.inner-box{
+    max-width: 250px;
+    border: 3px #e55ea2  solid;
+    padding: 0px 10px 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+.player-wrapper{
+    max-width: 1140px;
+
+    margin-right: auto;
+    margin-left: auto;
+}
+.player1-box, .player2-box{
+    display: inline-block;
+    margin-left: 23%;
+}
+.player2{
+    color: #b967ff;
+}
+.player1{
+    color: #ff71ce;
+}
+
+.internal-wrapper{
+    margin-top: 100px;
+    max-width: 600px;
+    border: 3px solid var(--pinkR);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    height: 584px;
+}
+.box{
+    width: 29%;
+    height: 173px;
+    border: 1px solid deepskyblue;
+    padding: 10px;
+    background-color: var(--bg);
     display: inline-flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    vertical-align: top;
+    font-family: karm;
+}
+#new-game{
+    text-align: center;
+    background-color: skyblue;
+    margin-left: 47%;
+    color: #b252a1;
+    border-color: hotpink;
+    border-radius: 3px;
+    font-size: 18px;
+    margin-top: 10px;
+    padding-bottom:3px;
+}
+
+.xClass{
+    color: rgb(255, 113, 406);
+}
+.oClass{
+    color: rgb(185, 103, 355);
+}
+
+.winning-o{
+    animation: winning-x 4s ease-out;
+    animation-iteration-count: infinite;
+}
+
+.winning-x{
+    animation: winning-o 4s ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes winning-x{
+    0% {
+        color: rgb(255, 113, 406);
+    }
+    50% {
+        color: rgb(255, 113, 206)
+    }
+    100% {
+        color: mediumvioletred;
+    }
 
 }
-#p1, #p2{
-color: rgb(233, 38, 142)
+@keyframes winning-o {
+    0% {
+        color: rgb(185, 103, 355);
+    }
+    50% {
+        color: rgb(195, 103, 255)
+    }
+    100% {
+        color: rgb( 107, 103, 255 );
+    }
 }
