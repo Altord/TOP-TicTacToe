@@ -147,7 +147,7 @@ const gameBoard = (()=>{
 
 
       
-**/
+
         console.log(`${currentPlayer.playerName} with symbol ${currentPlayer.symbol} is winner!
          Winning cells are ${winningCell[0]},${winningCell[1]},${winningCell[2]},`);
 
